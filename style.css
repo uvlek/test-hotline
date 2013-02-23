@@ -140,4 +140,4 @@ a:hover {
 .page-content {
   padding-top: 10px;
 }
- * { outline: none; }
+* { outline: none !important; }
