@@ -6,8 +6,9 @@ body {
   font-size: 12px;
 }
 
+
 /* css for timepicker */
-body,img,p,form,table,td,ul,ol,li,dl,dt,dd,pre,blockquote,fieldset,label{ margin:0;padding:0;border:0; }
+body,img,p,h1,h2,h3,h4,h5,h6,form,table,td,ul,ol,li,dl,dt,dd,pre,blockquote,fieldset,label{ margin:0;padding:0;border:0; }
 ul,ol{ margin: 10px 0 10px 40px; }
 li{ margin: 4px 0; }
 dl.defs{ margin: 10px 0 10px 40px; }
@@ -16,6 +17,10 @@ dl.defs dd{ margin: -20px 0 10px 160px; padding-bottom: 10px; border-bottom: sol
 .clear{ clear: both; }
 /* css for timepicker */
 
+
+header a {
+  /*color: #1B1B24;*/
+}
 header {
   width: 620px;
   margin: 0 auto;
@@ -107,9 +112,22 @@ a:hover {
   float: right;
   color: #000000;
 }
+.content .btn.valid:before {}
 .content .btn span {
   position: relative;
   z-index: 2;
+}
+.content .btn:hover:before {}
+.content .btn:hover {
+} 
+.btn:before {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
 }
 .ssap {
   color: red;
