@@ -1,5 +1,17 @@
 <?php require_once('elements/header.php'); ?>
 <?php require_once('elements/datepicker_init.php'); ?>
+
+<script type="text/javascript" src="lib/nicEdit.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+  //]]>
+  $("[class*='nicEdit']").blur(function(){
+    console.log($(this));
+    $(this).css('outline', 'none');
+  });
+</script>
+
   <div class="content">
     <form action="add.php" method="post" ENCTYPE="multipart/form-data">
       <div class="content-head">
@@ -10,9 +22,9 @@
         <div id="date">Дата: 
           <? if(isset($_POST['date']) && !empty($_POST['date'])) {
             $date = $_POST['date'];
-            echo '<span class="pass">*<span>';
+            echo '<span class="pass">*</span>';
           } else {
-            echo '<span class="ssap">*<span>';
+            echo '<span class="ssap">*</span>';
           }?>
           <input type="text" id="date-time-picker" name="date"/>
         </div>
@@ -26,9 +38,9 @@
         <label>Заголовок:</label>
         <? if(isset($_POST['title']) && !empty($_POST['title'])) {
           $title = $_POST['title'];
-          echo '<span class="pass">*<span>';
+          echo '<span class="pass">*</span>';
         } else {
-          echo '<span class="ssap">*<span>';
+          echo '<span class="ssap">*</span>';
         }?>
         <input type="text" name="title" value=""/>
       </div>
@@ -37,9 +49,9 @@
         <label>Контент:</label>
         <? if(isset($_POST['content']) && !empty($_POST['content'])) {
           $content = nl2br($_POST['content']);
-          echo '<span class="pass">*<span>';
+          echo '<span class="pass">*</span>';
         } else {
-          echo '<span class="ssap">*<span>';
+          echo '<span class="ssap">*</span>';
         }?>
         <textarea rows="10" cols="45" name="content"></textarea>
       </div>

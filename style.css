@@ -5,7 +5,9 @@ body {
   color: #333333;
   font-size: 12px;
 }
-
+:focus {
+  outline: none !important;
+}
 /* css for timepicker */
 body,img,p,form,table,td,ul,ol,li,dl,dt,dd,pre,blockquote,fieldset,label{ margin:0;padding:0;border:0; }
 ul,ol{ margin: 10px 0 10px 40px; }
@@ -138,3 +140,4 @@ a:hover {
 .page-content {
   padding-top: 10px;
 }
+ * { outline: none; }
